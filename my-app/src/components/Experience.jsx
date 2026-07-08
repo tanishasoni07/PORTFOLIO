@@ -1,4 +1,3 @@
-import React from 'react'
 import { Code, Monitor, Database, Calendar } from 'lucide-react'
 
 const Experience = () => {
@@ -104,3 +103,4 @@ const Experience = () => {
 }
 
 export default Experience
+
