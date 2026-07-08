@@ -1,4 +1,3 @@
-import React from 'react'
 import { MoonStar, SunMedium } from 'lucide-react'
 
 const ThemeToggle = ({ theme, onToggle }) => {
