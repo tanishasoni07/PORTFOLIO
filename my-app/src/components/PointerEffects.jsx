@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const PointerEffects = () => {
   const [pointer, setPointer] = useState({ x: -100, y: -100, visible: false })
@@ -53,3 +53,4 @@ const PointerEffects = () => {
 }
 
 export default PointerEffects
+
