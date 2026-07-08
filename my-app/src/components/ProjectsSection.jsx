@@ -1,4 +1,3 @@
-import React from 'react'
 import { ArrowUpRight, Code2, LayoutDashboard, Sparkles } from 'lucide-react'
 
 const ProjectsSection = () => {
@@ -94,3 +93,4 @@ const ProjectsSection = () => {
 }
 
 export default ProjectsSection
+
