@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import emailjs from '@emailjs/browser'
+import { useState } from 'react'
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -34,32 +33,22 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    emailjs
-      .send(
-        'service_c2fujur',
-        'template_f2hmy1p',
-        {
-          name: formData.name,
-          email: formData.email,
-          title: formData.title,
-          message: formData.message,
-        },
-        'b1w1r6RzNduFIaCDr'
-      )
-      .then(() => {
-        alert('Message sent successfully!')
+    const recipient = 'sonitanisha0107@gmail.com'
+    const subject = encodeURIComponent(
+      `${formData.title} - from ${formData.name}`
+    )
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )
 
-        setFormData({
-          name: '',
-          email: '',
-          title: '',
-          message: '',
-        })
-      })
-      .catch((error) => {
-        console.error('EmailJS Error:', error)
-        alert('Failed to send message.')
-      })
+    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`
+
+    setFormData({
+      name: '',
+      email: '',
+      title: '',
+      message: '',
+    })
   }
 
   const inputClass =
@@ -158,7 +147,7 @@ const ContactSection = () => {
                 type="submit"
                 className="w-full py-4 bg-primary hover:bg-primary/90 rounded-2xl font-semibold transition shadow-lg shadow-primary/20"
               >
-                Send Message
+                Send Enquiry
               </button>
             </form>
           </div>
