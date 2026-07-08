@@ -1,4 +1,3 @@
-import React from 'react'
 import about from '../assets/about.png'
 
 const AboutSection = () => {
@@ -69,3 +68,4 @@ const AboutSection = () => {
 }
 
 export default AboutSection
+
