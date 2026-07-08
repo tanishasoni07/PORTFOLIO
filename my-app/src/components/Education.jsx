@@ -1,4 +1,3 @@
-import React from 'react'
 import educ from '../assets/educ.png'
 import {
   Calendar,
