@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import hero from '../assets/hero.png'
 import { Download, Sparkles, ArrowRight } from 'lucide-react'
 
